@@ -2,6 +2,7 @@ import argparse
 import subprocess
 import sys
 import os
+import uv
 from kuv.ipynb_metadata import read_ipynb_script_metadata
 
 
@@ -15,9 +16,9 @@ def main():
     # Get metadata from notebook
     notebook_path = os.environ.get("JPY_SESSION_NAME", None)
     meta = read_ipynb_script_metadata(notebook_path)
-
+    uv_executable = uv.find_uv_bin()
     cmd = [
-        "uv",
+        uv_executable,
         "run",
         "--no-project",
         "--isolated",
