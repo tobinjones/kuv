@@ -1,6 +1,6 @@
 [project]
 name = "kuv"
-version = "0.1.0"
+version = "0.1.1"
 description = "A jupyter kernel with automatic PEP723 environments, using uv"
 readme = "README.md"
 authors = [
