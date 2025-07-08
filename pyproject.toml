@@ -1,6 +1,6 @@
 [project]
 name = "kuv"
-version = "0.1.1"
+version = "0.1.2"
 description = "A jupyter kernel with automatic PEP723 environments, using uv"
 readme = "README.md"
 authors = [
@@ -14,9 +14,6 @@ license = "MIT"
 license-files = [
     "LICENSE",
 ]
-
-[project.scripts]
-kuv-kernel-launcher = "kuv.kernel_launcher:main"
 
 [build-system]
 requires = ["hatchling"]

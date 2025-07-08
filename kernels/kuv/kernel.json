@@ -1,6 +1,8 @@
 {
   "argv": [
-    "kuv-kernel-launcher",
+    "python",
+    "-m",
+    "kuv.kernel_launcher",
     "-f",
     "{connection_file}"
   ],

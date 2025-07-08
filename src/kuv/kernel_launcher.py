@@ -43,3 +43,7 @@ def main():
     proc = subprocess.Popen(cmd)
     proc.wait()
     sys.exit(proc.returncode)
+
+# This is executable as a module, e.g. python -m kuv.kernel_launcher
+if __name__ == '__main__':
+    main()
