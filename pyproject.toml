@@ -4,9 +4,9 @@ version = "0.1.0"
 description = "A jupyter kernel with automatic PEP723 environments, using uv"
 readme = "README.md"
 authors = [
-    { name = "Tobin Jones", email = "tobinjones@me.com" }
+    { name = "Tobin Jones", email = "tobin@davisjones.nz" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "nbformat>=5.10.4",
 ]
