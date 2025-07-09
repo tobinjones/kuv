@@ -6,7 +6,9 @@
     "-f",
     "{connection_file}"
   ],
-  "name": "kuv",
-  "display_name": "kuv",
-  "language": "python"
+  "display_name": "Python 3 (kuv)",
+  "language": "python",
+  "metadata": {
+    "debugger": true
+  }
 }
