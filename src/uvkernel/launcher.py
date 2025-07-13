@@ -6,7 +6,7 @@ import tempfile
 
 import uv
 
-from kuv.ipynb_metadata import get_ipynb_script_metadata
+from uvkernel.ipynb_metadata import get_ipynb_script_metadata
 
 ipykernel_launch_script = """
 from ipykernel import kernelapp as app
@@ -15,7 +15,7 @@ app.launch_new_instance()
 
 def main():
     # Get connection file from arguments
-    parser = argparse.ArgumentParser(description="kuv")
+    parser = argparse.ArgumentParser(description="uvkernel")
     parser.add_argument( "-f", "--connection-file", required=True)
     args = parser.parse_args()
 
@@ -56,6 +56,6 @@ def main():
     sys.exit(result.returncode)
 
 
-# This is executable as a module, e.g. python -m kuv.kernel_launcher
+# This is executable as a module, e.g. python -m uvkernel.launcher
 if __name__ == "__main__":
     main()
