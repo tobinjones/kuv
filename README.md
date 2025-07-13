@@ -2,11 +2,13 @@
 This is a Jupyter kernel implementation that provides on-demand IPython kernels with dependencies pulled from PEP723 metadata. Each kernel instance is an on-demand virtual environment managed by `uv`. This kernel is compatible with notebooks modified by `juv`.
 
 # Installation and use
-Either:
 ```bash
 uv tool run --with uvvkernel --from jupyterlab jupyter-lab 
-``` 
-or just `pip install uvkernel` to your existing jupyter server environment.
+```
+You might want to append `--KernelSpecManager.allowed_kernelspecs="['uvkernel']"` to that command if you want to only have the uvkernel available (since the default kernel will be quite useless).
+
+Or just do something like `pip install uvkernel` to your existing jupyter server environment.
+
 
 # Known limitations
 - Can't install Jupyter extensions
