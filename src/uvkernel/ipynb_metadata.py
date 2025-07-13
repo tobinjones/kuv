@@ -4,6 +4,7 @@ import nbformat
 
 REGEX = r"(?m)^# /// (?P<type>[a-zA-Z0-9-]+)$\s(?P<content>(^#(| .*)$\s)+)^# ///$"
 
+
 def find_script_metadata_blocks(source: str) -> list[str]:
     """Read script metadata from python source
 
@@ -13,7 +14,8 @@ def find_script_metadata_blocks(source: str) -> list[str]:
     matches = filter(lambda m: m.group("type") == name, re.finditer(REGEX, source))
     return list(m.string for m in matches)
 
-def get_ipynb_script_metadata(file:str) -> str | None:
+
+def get_ipynb_script_metadata(file: str) -> str | None:
     """Get script metadata from ipynb file
 
     Metadata must be in a code cell. Cannot be split across multiple cells. Only one metadata block is allowed per notebook.
@@ -35,3 +37,11 @@ def get_ipynb_script_metadata(file:str) -> str | None:
         return script_metadata_blocks[0]
     else:
         raise ValueError("Multiple script blocks found")
+
+
+def get_ipynb_lock(file: str) -> str | None:
+    """Get lockfile from notebook metadata if exists"""
+
+    with open(file, "r", encoding="utf-8") as f:
+        notebook = nbformat.read(f, as_version=4)
+        return notebook["metadata"].get("uv.lock", None)
