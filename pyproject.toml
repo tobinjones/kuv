@@ -1,6 +1,6 @@
 [project]
 name = "uvkernel"
-version = "0.1.6"
+version = "0.2.0"
 description = "A jupyter kernel with automatic PEP723 environments, using uv"
 readme = "README.md"
 authors = [
