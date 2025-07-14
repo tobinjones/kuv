@@ -3,7 +3,7 @@ This is a Jupyter kernel implementation that provides on-demand IPython kernels 
 
 # Installation and use
 ```bash
-uv tool run --with uvvkernel --from jupyterlab jupyter-lab 
+uv tool run --with uvkernel --from jupyterlab jupyter-lab 
 ```
 You might want to append `--KernelSpecManager.allowed_kernelspecs="['uvkernel']"` to that command if you want to only have the uvkernel available (since the default kernel will be quite useless).
 
